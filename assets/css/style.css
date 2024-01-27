@@ -15,9 +15,10 @@ html {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  color: #fff;
+
+  color: rgb(255, 255, 255);
 }
 
 /* Font-size change */
@@ -25,7 +26,7 @@ h1 {
 /* Mobile SE */
 @media only screen and (max-width: 400px) {
   html {
-      font-size: 14px;
+      font-size: 12px;
   }
 }
 
@@ -46,10 +47,54 @@ h1 {
 /* Header ********************** */
 header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 500px;
   background-image: url('../images/background.jpg');
   background-size: cover;
   background-position: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header li {
+  display: inline-block;
+
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.border_out {
+  padding: 1rem;
+}
+
+/* Media Information */
+.media_information img {
+  width: auto;
+  height: 2rem;
+
+  border-radius: 10px;
+}
+
+/* Own Information */
+.own_information a {
+  padding: 0.25rem;
+
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(249, 115, 22);
+  border-radius: 10px;
+}
+
+.own_information a:hover {
+  opacity: 0.9;
+}
+
+.own_information img {
+  width: 0.9rem;
+  height: auto;
 }
