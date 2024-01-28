@@ -62,7 +62,7 @@ header {
   justify-content: center;
   align-items: center;
 
-  height: 700px;
+  height: 100vh;
   background-image: url('../images/background.jpg');
   background-size: cover;
   background-position: center;
@@ -117,25 +117,57 @@ header li {
 /* About Me */
 #about_me {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
-  height: 350px;
-  padding: 2rem;
+  min-height: 350px;
 
   color: rgb(255, 255, 255);
   background-color: rgb(38, 38, 38);
 }
 
 #about_me .information {
-  max-width: 25rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 
+  max-width: 750px;
+  padding: 2rem;
+}
+
+
+
+#about_me .text_information {
+  max-width: 400px;
+  margin: 1.5rem;
   line-height: 2rem;
 }
 
 #about_me img {
+  display: inline;
+
   width: auto;
   height: 7rem;
 
   border-radius: 10px;
 }
+
+
+
+
+/* Footer ***************************************** */
+
+#contact_me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 120px;
+
+  color: rgb(255, 255, 255);
+  background-color: rgb(38, 38, 38);
+}
+
+
