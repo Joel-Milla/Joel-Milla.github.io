@@ -36,7 +36,7 @@ h3 {
   font-size: 1.4rem;
   font-weight: 500;
 
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 
   color: rgb(0, 0, 0);
 }
@@ -162,7 +162,7 @@ header li {
   border-radius: 10px;
 }
 
-/* About Me ******************** */
+/* Profesisonal Information ******************** */
 
 #professional_information {
   display: flex;
@@ -177,9 +177,16 @@ header li {
   border-bottom: 2px solid rgb(249, 115, 22);
 }
 
+.skill_bar {
+  width: 240px;
+  height: 15px;
+
+  border-radius: 25px;
+  background: linear-gradient(to right, rgb(249, 115, 22) 50%, rgb(196, 196, 196) 50%);
+}
+
 
 /* Footer ***************************************** */
-
 #contact_me {
   display: flex;
   flex-direction: column;
