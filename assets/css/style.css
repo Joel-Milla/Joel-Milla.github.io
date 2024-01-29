@@ -33,10 +33,17 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
 
   margin-bottom: 0.8rem;
+
+  color: rgb(0, 0, 0);
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
 
   color: rgb(0, 0, 0);
 }
@@ -168,13 +175,25 @@ header li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#professional_information section {
+  display: flex;
+  justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
+
+  margin: 2.5rem 1rem 2.5rem 1rem;
 }
 
 #professional_information section h3 {
   float: left;
 
   border-bottom: 2px solid rgb(249, 115, 22);
+}
+
+section .content {
+  margin-left: 2.5rem;
 }
 
 .skill_bar {
@@ -184,6 +203,8 @@ header li {
   border-radius: 25px;
   background: linear-gradient(to right, rgb(249, 115, 22) 50%, rgb(196, 196, 196) 50%);
 }
+
+
 
 
 /* Footer ***************************************** */
