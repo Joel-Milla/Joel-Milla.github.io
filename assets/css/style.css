@@ -152,8 +152,6 @@ header li {
   padding: 2rem;
 }
 
-
-
 #about_me .text_information {
   max-width: 400px;
   margin: 1.5rem;
@@ -172,39 +170,49 @@ header li {
 /* Profesisonal Information ******************** */
 
 #professional_information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: repeat(4, 25%);
+  gap: 1%;
+  max-width: 750px;
+
+  margin: 5rem auto 5rem auto;
 }
 
 #professional_information section {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 25% 60%;
 
   margin: 2.5rem 1rem 2.5rem 1rem;
 }
 
-#professional_information section h3 {
-  float: left;
-
+#professional_information section h3 span {
   border-bottom: 2px solid rgb(249, 115, 22);
 }
 
 section .content {
-  margin-left: 2.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.skill_bar {
+/* .skill_bar {
   width: 240px;
   height: 15px;
 
   border-radius: 25px;
   background: linear-gradient(to right, rgb(249, 115, 22) 50%, rgb(196, 196, 196) 50%);
+} */
+
+/* Max width tablet */
+@media only screen and (max-width: 760px) {
+  #professional_information section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
-
-
 
 
 /* Footer ***************************************** */
