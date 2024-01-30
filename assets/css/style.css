@@ -250,3 +250,7 @@ input[type="submit"] {
   padding: 0.5rem;
 }
 
+#done {
+  color: rgb(249, 115, 22);
+  display: none;
+}
