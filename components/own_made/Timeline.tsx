@@ -7,12 +7,12 @@ interface TimelineProps {
 
 export default function Timeline({ experiences }: TimelineProps) {
   return (
-    <div className="relative" id="experience">
+    <div className="relative">
       {/* Vertical connecting line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2" />
 
       {/* Timeline items */}
-      <div className="space-y-24" id="experience">
+      <div className="space-y-24">
         {experiences.map((exp) => (
           <div key={exp.id} className="relative">
             {/* Logo container in center */}

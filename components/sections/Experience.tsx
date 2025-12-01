@@ -16,7 +16,7 @@ export default function Experience() {
       id="experience"
       className="min-h-screen bg-background py-12 px-4 z-50"
     >
-      <div className="max-w-6xl mx-auto" id="experience">
+      <div className="max-w-6xl mx-auto">
         <h1 className="text-6xl font-bold text-center mb-4 text-balance">
           Timeline
         </h1>
