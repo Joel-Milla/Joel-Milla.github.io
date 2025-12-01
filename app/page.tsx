@@ -1,13 +1,11 @@
-import { HeroSection } from "@/components/sections/Home/HeroSection";
+import { HeroSection } from "@/components/sections/HeroSection";
+import Experience from "@/components/sections/Experience";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <HeroSection />
-      <HeroSection />
-      <HeroSection />
-      <HeroSection />
+      <Experience />
       <HeroSection />
       <HeroSection />
     </>

@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <MainBar
           userName="Joel Milla"
-          navItems={["Home", "Experience", "Projects", "Blog"]}
+          navItems={["Home", "Experience", "Projects"]}
         />
         <main className="pt-20">{children}</main>
       </body>

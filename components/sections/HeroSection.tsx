@@ -50,7 +50,7 @@ export function HeroSection() {
             }}
             className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
           >
-            I am deeply interested in autonomous vehicles—how they perceive
+            I am deeply interested in autonomous vehicles - how they perceive
             their surroundings, localize themselves, and plan intelligent
             routes. Currently pursuing a Bachelor&apos;s in Computer Science at
             the Tec de Monterrey.

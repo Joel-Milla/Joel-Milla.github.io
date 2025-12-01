@@ -19,7 +19,7 @@ export function MainBar({ userName, navItems }: MainBarProps) {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between px-8 py-4 bg-white/80 shadow-sm rounded-b-2xl backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between px-8 py-4 bg-white/80 shadow-sm rounded-b-2xl backdrop-blur-sm z-50">
       <Link href="/">
         <Button
           variant="ghost"
