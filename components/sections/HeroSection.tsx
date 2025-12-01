@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Linkedin, Github } from "lucide-react";
 
 export default function HeroSection() {
   // Smooth scroll to section
@@ -96,6 +96,39 @@ export default function HeroSection() {
             >
               <Download />
               Resume
+            </a>
+          </motion.div>
+          {/* Buttons for github and linkedin */}
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: 1.2,
+            }}
+            className="relative z-10 mt-6 flex items-center justify-center gap-4"
+          >
+            <a
+              href="https://www.linkedin.com/in/joelmilla/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rounded-lg p-3 bg-white border border-gray-300 text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:bg-black dark:border-gray-700 dark:text-white dark:hover:bg-gray-900"
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a
+              href="https://github.com/Joel-Milla?tab=overview"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rounded-lg p-3 bg-white border border-gray-300 text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:bg-black dark:border-gray-700 dark:text-white dark:hover:bg-gray-900"
+              aria-label="GitHub Profile"
+            >
+              <Github size={24} />
             </a>
           </motion.div>
         </div>

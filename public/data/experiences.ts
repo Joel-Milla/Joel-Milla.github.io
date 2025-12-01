@@ -47,4 +47,16 @@ export const experiences: Experience[] = [
       "Founded AI-powered healthcare startup developing clinical copilot that instantly analyzes patient biometric data and symptom history to support medical decisions. Took one semester off school to work full-time on the idea.",
     side: "left" as const,
   },
+  {
+    id: 4,
+    year: "Jun 2025 - Present",
+    company: "AiR (Artificial Intelligence and Robotics) Laboratory",
+    location: "Queretaro, QR, Mexico",
+    logo: "/air.svg",
+    title: "Research Assistant",
+    type: "Full-time",
+    description:
+      "I adapted the LaneATT deep learning architecture for autonomous navigation in an agricultural robot, achieving 91% F1 score with 48ms inference time and 1.67° average yaw error in field trials.",
+    side: "right" as const,
+  },
 ];
