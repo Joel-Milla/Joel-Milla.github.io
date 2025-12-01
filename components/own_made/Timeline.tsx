@@ -1,14 +1,5 @@
 import Image from "next/image";
-
-interface Experience {
-  id: number;
-  year: string;
-  company: string;
-  location: string;
-  logo: string;
-  description: string;
-  side: "left" | "right";
-}
+import { Experience } from "@/public/data/experiences";
 
 interface TimelineProps {
   experiences: Experience[];
@@ -16,12 +7,12 @@ interface TimelineProps {
 
 export default function Timeline({ experiences }: TimelineProps) {
   return (
-    <div className="relative">
+    <div className="relative" id="experience">
       {/* Vertical connecting line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2" />
 
       {/* Timeline items */}
-      <div className="space-y-24">
+      <div className="space-y-24" id="experience">
         {experiences.map((exp) => (
           <div key={exp.id} className="relative">
             {/* Logo container in center */}
@@ -38,6 +29,7 @@ export default function Timeline({ experiences }: TimelineProps) {
             </div>
 
             {/* Content positioned left or right */}
+
             <div
               className={`grid grid-cols-2 gap-24 items-center ${
                 exp.side === "left" ? "text-right" : ""
@@ -56,14 +48,12 @@ export default function Timeline({ experiences }: TimelineProps) {
                       {exp.description}
                     </p>
                   </div>
-                  {/* Empty space on right */}
                   <div />
                 </>
               ) : (
                 <>
-                  {/* Empty space on left */}
-                  <div />
                   {/* Content on right */}
+                  <div />
                   <div className="pl-32">
                     <p className="text-2xl font-bold mb-2">{exp.year}</p>
                     <h2 className="text-4xl font-bold mb-1">

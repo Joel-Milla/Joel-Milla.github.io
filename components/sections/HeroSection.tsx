@@ -1,10 +1,21 @@
 "use client";
 
 import { motion } from "motion/react";
-import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 
 export default function HeroSection() {
+  // Smooth scroll to section
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for navbar height
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div
       id="home"
@@ -71,12 +82,13 @@ export default function HeroSection() {
             }}
             className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
           >
-            <Link href="/projects">
-              <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 flex items-center justify-center gap-2">
-                <ArrowRight />
-                View My Work
-              </button>
-            </Link>
+            <button
+              onClick={() => scrollToSection("experience")}
+              className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <ArrowRight />
+              View My Work
+            </button>
             <a
               href="/data/CVJoel.pdf"
               download="CVJoel.pdf"

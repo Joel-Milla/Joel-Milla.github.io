@@ -11,31 +11,31 @@ export function MainBar({ userName, navItems }: MainBarProps) {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    // Intersection Observer to detect which section is in view
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.3, // Trigger when 30% of section is visible
-        rootMargin: "-80px 0px -50% 0px", // Account for navbar height
+    const handleScroll = () => {
+      const sections = navItems.map((item) =>
+        document.getElementById(item.toLowerCase())
+      );
+
+      // Find which section is currently in view
+      // We check from top to bottom and activate the first section whose top is above the middle of the screen
+      const scrollPosition = window.scrollY + 100; // Offset for navbar
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(section.id);
+          break;
+        }
       }
-    );
+    };
 
-    // Observe all sections
-    const sections = navItems.map((item) =>
-      document.getElementById(item.toLowerCase())
-    );
+    // Call once on mount
+    handleScroll();
 
-    sections.forEach((section) => {
-      if (section) observer.observe(section);
-    });
+    // Listen to scroll events
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => observer.disconnect();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [navItems]);
 
   // Function to check if a nav item is active
@@ -69,22 +69,18 @@ export function MainBar({ userName, navItems }: MainBarProps) {
           const active = isActive(item);
 
           return (
-            <button
+            <Button
               key={item}
               onClick={() => scrollToSection(sectionId)}
-              className="bg-transparent border-none p-0 cursor-pointer"
+              variant={active ? "secondary" : "ghost"}
+              className={
+                active
+                  ? "rounded-xl font-medium px-4 py-2 shadow-none bg-muted text-foreground cursor-pointer"
+                  : "font-medium px-4 py-2 shadow-none text-muted-foreground cursor-pointer"
+              }
             >
-              <Button
-                variant={active ? "secondary" : "ghost"}
-                className={
-                  active
-                    ? "rounded-xl font-medium px-4 py-2 shadow-none bg-muted text-foreground cursor-pointer"
-                    : "font-medium px-4 py-2 shadow-none text-muted-foreground cursor-pointer"
-                }
-              >
-                {item}
-              </Button>
-            </button>
+              {item}
+            </Button>
           );
         })}
       </div>

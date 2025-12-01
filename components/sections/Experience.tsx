@@ -1,32 +1,22 @@
+"use client";
+
 import Timeline from "@/components/own_made/Timeline";
+import { experiences } from "@/public/data/experiences";
+import { useEffect } from "react";
 
 export default function Experience() {
-  const experiences = [
-    {
-      id: 1,
-      year: "2019 - Present",
-      company: "Google",
-      location: "Mountain View, CA",
-      logo: "/google_logo.svg",
-      description:
-        "I currently work as a Software Engineer at Google headquarters in Mountain View, California.",
-      side: "right" as const,
-    },
-    {
-      id: 2,
-      year: "2018 - Present",
-      company: "MIT Media Lab",
-      location: "Cambridge, MA",
-      logo: "/next.svg",
-      description:
-        "My research on the AlterEgo project, which I demoed at TED 2019, focuses on developing neural network models for a wearable system that allows humans to",
-      side: "left" as const,
-    },
-  ];
+  useEffect(() => {
+    const section = document.getElementById("experience");
+    console.log("Section id:", section?.id);
+    console.log("Is id 'experience'?", section?.id === "experience");
+  }, []);
 
   return (
-    <main id="experience" className="min-h-screen bg-background py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section
+      id="experience"
+      className="min-h-screen bg-background py-12 px-4 z-50"
+    >
+      <div className="max-w-6xl mx-auto" id="experience">
         <h1 className="text-6xl font-bold text-center mb-4 text-balance">
           Timeline
         </h1>
@@ -35,6 +25,6 @@ export default function Experience() {
         </p>
         <Timeline experiences={experiences} />
       </div>
-    </main>
+    </section>
   );
 }
