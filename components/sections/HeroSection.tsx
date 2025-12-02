@@ -32,7 +32,7 @@ export default function HeroSection() {
       </div>
       <div className="px-4 py-10 md:py-20 flex">
         <div>
-          <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl dark:text-slate-300">
+          <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl dark:text-slate-300 ">
             {"Hi, I'm Joel Milla - Perception Engineer"
               .split(" ")
               .map((word, index) => (
@@ -84,7 +84,7 @@ export default function HeroSection() {
           >
             <button
               onClick={() => scrollToSection("experience")}
-              className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 flex items-center justify-center gap-2 cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500"
             >
               <ArrowRight />
               View My Work

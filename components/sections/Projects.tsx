@@ -1,4 +1,4 @@
-import { CardProject } from "../own_made/CardProject";
+import { ProjectItem } from "../own_made/ProjectItem";
 
 export default function Projects() {
   return (
@@ -11,7 +11,7 @@ export default function Projects() {
           Here you can see some of the projects I&apos;ve done on my own time.
         </p>
       </div>
-      <CardProject />
+      <ProjectItem />
     </section>
   );
 }
