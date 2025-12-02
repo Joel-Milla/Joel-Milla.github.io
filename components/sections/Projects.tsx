@@ -1,3 +1,5 @@
+import { CardProject } from "../own_made/CardProject";
+
 export default function Projects() {
   return (
     <section id="projects" className="min-h-screen bg-background py-12 px-4">
@@ -6,9 +8,10 @@ export default function Projects() {
           Projects
         </h1>
         <p className="text-center text-muted-foreground text-lg mb-16">
-          Coming soon...
+          Here you can see some of the projects I&apos;ve done on my own time.
         </p>
       </div>
+      <CardProject />
     </section>
   );
 }
