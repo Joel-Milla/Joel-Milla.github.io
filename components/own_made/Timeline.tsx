@@ -2,11 +2,11 @@ import React from "react";
 import { Timeline as TimelineComponent } from "@/components/ui/timeline";
 import { Experience } from "@/public/data/experiences";
 
-interface Timeline2Props {
+interface TimelineProps {
   experiences: Experience[];
 }
 
-export default function Timeline({ experiences }: Timeline2Props) {
+export default function Timeline({ experiences }: TimelineProps) {
   const data = experiences.map((exp) => ({
     title: exp.company,
     content: (

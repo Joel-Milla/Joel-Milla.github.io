@@ -1,4 +1,5 @@
 import { ProjectItem } from "../own_made/ProjectItem";
+import { projects } from "@/public/data/projects";
 
 export default function Projects() {
   return (
@@ -11,7 +12,7 @@ export default function Projects() {
           Here you can see some of the projects I&apos;ve done on my own time.
         </p>
       </div>
-      <ProjectItem />
+      <ProjectItem projects={projects} />
     </section>
   );
 }
