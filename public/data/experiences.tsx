@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
     title: "Software Engineer Intern",
     type: "Internship",
     description:
-      "Collaborated with the YouTube Education team to enhance content discovery for 14M+ learners struggling to find relevant educational videos. Deployed personalized badge features impacting 2M+ users within 3 months.",
+      "Collaborated with the YouTube Education team to enhance content discovery for 14M+ learners struggling to find relevant educational videos by extracting, rendering, and transferring academic metadata across Google's data infrastructure to display useful information on YouTube pages. Deployed personalized badge features impacting 2M+ users within 3 months.",
     side: "right" as const,
     imageDescription: (
       <div className="grid grid-cols-2 gap-4">
@@ -98,17 +98,17 @@ export const experiences: Experience[] = [
     title: "Research Assistant",
     type: "Full-time",
     description:
-      "I adapted the LaneATT deep learning architecture for autonomous navigation in an agricultural robot, achieving 91% F1 score with 48ms inference time and 1.67° average yaw error in field trials.",
+      "Made an agricultural robot autonomous by building, training, and deploying AI architecture with specialized control for greenhouse environments. Adapted the LaneATT deep learning architecture for autonomous navigation, achieving 91% F1 score with 48ms inference time and 1.67° average yaw error in field trials.",
     side: "right" as const,
     imageDescription: (
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         <img
           src="/jackal1.svg"
           alt="AiR Laboratory"
           width={500}
           height={500}
           loading="lazy"
-          className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          className="h-20 md:h-44 lg:h-60 w-full lg:col-span-2 rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
         />
         <video
           src="/jackal2.webm"
@@ -117,7 +117,7 @@ export const experiences: Experience[] = [
           muted
           playsInline
           preload="none"
-          className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+          className="h-20 md:h-44 lg:h-80 w-full lg:col-span-1 rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
         />
       </div>
     ),
