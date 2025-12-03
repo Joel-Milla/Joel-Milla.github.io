@@ -100,7 +100,7 @@ export const experiences: Experience[] = [
     title: "Research Assistant",
     type: "Full-time",
     description:
-      "Made an agricultural robot autonomous by building, training, and deploying AI architecture with specialized control for greenhouse environments. Adapted the LaneATT deep learning architecture for autonomous navigation, achieving 91% F1 score with 48ms inference time and 1.67° average yaw error in field trials.",
+      "Built, trained, and deployed AI architecture with specialized control for greenhouse environments to make an agricultural robot autonomous at the AiR (Artificial Intelligence and Robotics) Laboratory. Adapted the LaneATT deep learning architecture for autonomous navigation, achieving 91% F1 score with 48ms inference time and 1.67° average yaw error in field trials.",
     side: "right" as const,
     imageDescription: (
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
