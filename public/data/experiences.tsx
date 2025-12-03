@@ -9,6 +9,7 @@ export type Experience = {
   description: string;
   side: "right" | "left";
   imageDescription: React.ReactNode;
+  url?: string;
 };
 
 export const experiences: Experience[] = [
@@ -88,6 +89,7 @@ export const experiences: Experience[] = [
         />
       </div>
     ),
+    url: "https://github.com/Joel-Milla/MedTracker_MbApp",
   },
   {
     id: 4,
@@ -121,5 +123,6 @@ export const experiences: Experience[] = [
         />
       </div>
     ),
+    url: "https://github.com/Joel-Milla/RealTime-LaneATT",
   },
 ];

@@ -1,4 +1,5 @@
-import { Github } from "lucide-react";
+"use client";
+
 import {
   Card,
   CardContent,
@@ -7,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ProjectItemType } from "@/public/data/projects";
+import { GithubButton } from "./Icons/GithubButton";
 
 interface ProjectProps {
   projects: ProjectItemType[];
@@ -38,7 +40,7 @@ export function ProjectItem({ projects }: ProjectProps) {
             </p>
 
             {/* Content */}
-            <div>
+            <div className="flex flex-col gap-4">
               <CardHeader>
                 <CardTitle className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent pb-1 text-3xl">
                   {proj.projectName}
@@ -49,19 +51,8 @@ export function ProjectItem({ projects }: ProjectProps) {
                 </CardDescription>
               </CardHeader>
 
-              <CardContent>
-                <a
-                  href={proj.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="my-4 inline-flex transform rounded-lg p-3 bg-white border border-gray-300 text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:bg-black dark:border-gray-700 dark:text-white dark:hover:bg-gray-900"
-                  aria-label="GitHub Profile"
-                >
-                  <Github size={14} />
-                </a>
-              </CardContent>
-
-              <CardContent>
+              <CardContent className="flex flex-col gap-4">
+                <GithubButton url={proj.url} size={14} />
                 <div className="flex flex-wrap gap-2">
                   {proj.technologies.map((tech, techIndex) => (
                     <span
