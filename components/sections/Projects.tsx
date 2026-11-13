@@ -1,6 +1,5 @@
 import { ProjectItem } from "../own_made/ProjectItem";
 import { moreProjects } from "@/public/data/projects";
-import { MagicCardDemo } from "../own_made/MagicCardDemo";
 import { CarouselProjects } from "../own_made/CarouselProjects";
 
 export default function Projects() {
