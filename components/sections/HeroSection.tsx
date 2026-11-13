@@ -138,7 +138,7 @@ export default function HeroSection() {
         >
           <div className="flex-1 flex justify-center md:justify-end">
             <video
-              src="/car camera.webm"
+              src="/car-camera.mp4"
               width={400}
               height={400}
               autoPlay
