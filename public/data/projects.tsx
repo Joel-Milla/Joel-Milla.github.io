@@ -7,16 +7,68 @@ export interface ProjectItemType {
   url: string;
 }
 
-export const projects: ProjectItemType[] = [
+export interface FeaturedProjectType {
+  id: number;
+  name: string;
+  // Gray subtitle: "Independent Project" or "at <University name>"
+  affiliation: string;
+  summary: string;
+  media: string;
+  mediaType: "video" | "image";
+  technologies: string[];
+  url: string;
+}
+
+// Shown in the carousel (components/own_made/CarouselProjects.tsx)
+export const featuredProjects: FeaturedProjectType[] = [
   {
-    period: "Jan 2025 — May 2025",
-    role: "Developer",
-    projectName: "LiDAR-Based Perception System",
-    description:
-      "Developed a point cloud processing pipeline for autonomous vehicle perception using KITTI dataset, enabling real-time object clustering and multi-frame tracking in urban environments. Implemented custom RANSAC-based plane segmentation to separate road surfaces from obstacles, followed by KD-tree optimized Euclidean clustering for object identification. Built a particle filter algorithm to track moving objects (such as cyclists) across sequential point cloud frames, maintaining temporal consistency. Enhanced processing efficiency through voxel grid filtering and region-of-interest selection, achieving sub-0.2 second processing times per frame while handling high-resolution LiDAR data from urban datasets.",
-    technologies: ["C++", "PCL", "RANSAC", "KD-Tree", "Particle Filter"],
+    id: 1,
+    name: "Sensor Fusion Collision Detection",
+    affiliation: "Independent Project",
+    summary:
+      "C++ LiDAR-camera fusion pipeline that matches KITTI point clouds to YOLOv3 detections to estimate time-to-collision.",
+    media: "/lidar_camera.png",
+    mediaType: "image",
+    technologies: ["C++", "OpenCV", "YOLOv3", "3D LiDAR"],
+    url: "https://github.com/Joel-Milla/3D_Object_Tracking",
+  },
+  {
+    id: 2,
+    name: "Autonomous Racing F1TENTH Car",
+    affiliation: "at Carnegie Mellon University",
+    summary:
+      "1/10 scale autonomous race car with LiDAR-based planning and control that placed 2nd of 12 teams.",
+    media: "/car_driving.mp4",
+    mediaType: "video",
+    technologies: ["ROS2", "C++", "Pure Pursuit"],
+    url: "https://github.com/Joel-Milla/f1tenth_racing",
+  },
+  {
+    id: 3,
+    name: "LiDAR-Based Perception System",
+    affiliation: "Independent Project",
+    summary:
+      "C++ LiDAR obstacle detection with RANSAC and KD-tree clustering written from scratch, cutting processing from 1.2 s to 0.2 s per scan.",
+    media: "/lidar_tracking.mp4",
+    mediaType: "video",
+    technologies: ["C++", "PCL", "RANSAC", "KD-Tree"],
     url: "https://github.com/Joel-Milla/Lidar_Obstacle_Detection",
   },
+  {
+    id: 4,
+    name: "Underwater Vehicle Perception",
+    affiliation: "at Tec de Monterrey",
+    summary:
+      "Configured ZED stereo camera on an NVIDIA Jetson for an underwater autonomous vehicle, with a pipeline for depth estimation.",
+    media: "/vanttec_uuv.png",
+    mediaType: "image",
+    technologies: ["C++", "ROS2", "ZED Camera"],
+    url: "https://github.com/vanttec/vanttec_uuv_Legacy",
+  },
+];
+
+// Shown in the list below the carousel (components/own_made/ProjectItem.tsx)
+export const moreProjects: ProjectItemType[] = [
   {
     period: "Jan 2025 — May 2025",
     role: "Developer",

@@ -49,11 +49,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h1 className="text-4xl md:text-6xl mb-4 text-black dark:text-white max-w-4xl font-bold">
+      <div className="max-w-6xl mx-auto pt-20">
+        <h1 className="text-6xl font-bold text-center mb-4 text-balance">
           Experience
         </h1>
-        <p className="text-neutral-700 dark:text-neutral-300 md:text-base max-w-sm text-lg">
+        <p className="text-center text-muted-foreground text-lg mb-16">
           A short timeline of my work experience...
         </p>
       </div>
@@ -62,7 +62,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:pt-10 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-16 absolute left-0 md:left-0 w-16 rounded-full bg-white dark:bg-black flex items-center justify-center border-4 overflow-hidden">
