@@ -40,8 +40,8 @@ export default function HeroSection() {
               .map((word, index) => (
                 <motion.span
                   key={index}
-                  initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                  animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.3,
                     delay: index * 0.1,
