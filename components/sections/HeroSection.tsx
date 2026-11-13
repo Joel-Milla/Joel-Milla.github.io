@@ -35,7 +35,7 @@ export default function HeroSection() {
       <div className="px-4 py-10 md:py-20 flex">
         <div>
           <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl dark:text-slate-300 ">
-            {"Hi, I'm Joel Milla - Perception Engineer"
+            {"Hi, I'm Joel Milla -  Robotics Software Engineer"
               .split(" ")
               .map((word, index) => (
                 <motion.span
@@ -66,10 +66,9 @@ export default function HeroSection() {
             }}
             className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
           >
-            I am deeply interested in autonomous vehicles - how they perceive
-            their surroundings, localize themselves, and plan intelligent
-            routes. Currently pursuing a Bachelor&apos;s in Computer Science at
-            the Tec de Monterrey.
+            I&apos;m passionate about taking robots from code to the real world, from perception to deployment. 
+            Currently pursuing a Master&apos;s in Robotic Systems Development at <span className="font-semibold">Carnegie Mellon University</span>{" "}  
+            and building autonomous drones at CMU AirLab.
           </motion.p>
           <motion.div
             initial={{

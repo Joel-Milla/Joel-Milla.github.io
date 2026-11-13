@@ -15,7 +15,7 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     id: 1,
-    year: "Jun 2025 - Present",
+    year: "Jun 2025 - January 2026",
     company: "AiR Laboratory",
     location: "Queretaro, QR, Mexico",
     logo: "/air.svg",
@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
     imageDescription: (
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         <img
-          src="/jackal1.svg"
+          src="/jackal1.webp"
           alt="AiR Laboratory"
           width={500}
           height={500}
@@ -61,7 +61,7 @@ export const experiences: Experience[] = [
     imageDescription: (
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         <img
-          src="/MedTracker1.svg"
+          src="/MedTracker1.webp"
           alt="MedTracker"
           width={500}
           height={500}
@@ -94,7 +94,7 @@ export const experiences: Experience[] = [
     imageDescription: (
       <div className="grid grid-cols-2 gap-4">
         <img
-          src="/yt1.svg"
+          src="/yt1.webp"
           alt="YouTube Education"
           width={500}
           height={500}
@@ -102,7 +102,7 @@ export const experiences: Experience[] = [
           className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
         />
         <img
-          src="/yt2.svg"
+          src="/yt2.webp"
           alt="YouTube Education"
           width={500}
           height={500}
